@@ -10,7 +10,7 @@
 
 	<properties>
 		<java.version>17</java.version>
-		<spring.boot.version>2.7.17</spring.boot.version>
+		<spring.boot.version>3.4.5</spring.boot.version>
 		<resilience4j.version>2.2.0</resilience4j.version>
 	</properties>
 
