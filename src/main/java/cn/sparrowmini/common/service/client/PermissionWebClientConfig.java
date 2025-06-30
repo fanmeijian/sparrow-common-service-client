@@ -14,11 +14,6 @@ public class PermissionWebClientConfig {
     @Value("${sparrow.permission.url}")
     private String apiBase;
 
-//
-//    @Bean
-//    public WebClient.Builder webClientBuilder() {
-//        return WebClient.builder();
-//    }
 
     public WebClient webClient() {
         return WebClient.builder()
