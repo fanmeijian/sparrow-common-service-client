@@ -3,6 +3,7 @@ package cn.sparrowmini.common.service.client.listener;
 import cn.sparrowmini.common.CurrentUser;
 import cn.sparrowmini.common.constant.PermissionEnum;
 import cn.sparrowmini.common.exception.DenyPermissionException;
+import cn.sparrowmini.common.exception.NoPermissionException;
 import cn.sparrowmini.common.service.client.ModelPermissionServiceClient;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.event.spi.PreDeleteEvent;
@@ -29,7 +30,7 @@ public class DeleteEventListener implements PreDeleteEventListener {
                     .block();
 
             if (Boolean.FALSE.equals(hasPermission)) {
-                throw new DenyPermissionException("没有权限删除模型: " + modelId);
+                throw new NoPermissionException("没有权限删除模型: " + modelId);
             }
 
             return false; // 允许删除

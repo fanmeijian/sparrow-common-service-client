@@ -33,7 +33,7 @@ public class ModelPermissionServiceClient {
                 .retrieve()
                 .onStatus(HttpStatusCode::is4xxClientError, clientResponse ->
                         clientResponse.bodyToMono(String.class)
-                                .flatMap(errorBody -> Mono.error(new DenyPermissionException(errorBody)))
+                                .flatMap(errorBody -> Mono.error(new AccessDeniedException(errorBody)))
                 )
                 .onStatus(HttpStatusCode::is5xxServerError, clientResponse ->
                         clientResponse.bodyToMono(String.class)
