@@ -9,13 +9,8 @@ import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
-public class ScopePermissionServiceClient {
+public class AppConfigServiceClient {
     private final PermissionWebClientConfig permissionWebClientConfig;
-//    private WebClient webClient;
-
-//    public ScopePermissionServiceClient(){
-//        this.webClient = permissionWebClientConfig.webClient();
-//    }
 
     @WithReactiveSecurityContext
     public Mono<Boolean> hasPermission(String scope) {

@@ -1,4 +1,4 @@
-package cn.sparrowmini.common.service.client;
+package cn.sparrowmini.common.service.client.config;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,7 +14,7 @@ import reactor.util.context.Context;
 @Component
 public class WithSecurityContextBlockingAspect {
 
-    @Around("@annotation(cn.sparrowmini.common.service.client.WithSecurityContextBlocking)")
+    @Around("@annotation(cn.sparrowmini.common.service.client.config.WithSecurityContextBlocking)")
     public Object wrapWithSecurityContext(ProceedingJoinPoint joinPoint) throws Throwable {
         SecurityContext context = SecurityContextHolder.getContext();
 

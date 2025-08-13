@@ -1,4 +1,4 @@
-package cn.sparrowmini.common.service.client;
+package cn.sparrowmini.common.service.client.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -15,7 +15,7 @@ import reactor.util.context.Context;
 @Slf4j
 public class ReactiveSecurityContextAspect {
 
-    @Around("@annotation(cn.sparrowmini.common.service.client.WithReactiveSecurityContext)")
+    @Around("@annotation(cn.sparrowmini.common.service.client.config.WithReactiveSecurityContext)")
     public Object wrapReactiveSecurityContext(ProceedingJoinPoint joinPoint) throws Throwable {
         Object result = joinPoint.proceed();
 

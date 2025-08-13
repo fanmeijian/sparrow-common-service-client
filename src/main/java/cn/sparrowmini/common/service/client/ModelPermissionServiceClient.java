@@ -1,7 +1,7 @@
 package cn.sparrowmini.common.service.client;
 
 import cn.sparrowmini.common.constant.PermissionEnum;
-import cn.sparrowmini.common.exception.DenyPermissionException;
+import cn.sparrowmini.common.service.client.config.PermissionWebClientConfig;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
@@ -9,7 +9,6 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import org.springframework.http.HttpStatus;
 
 @Service
 @RequiredArgsConstructor

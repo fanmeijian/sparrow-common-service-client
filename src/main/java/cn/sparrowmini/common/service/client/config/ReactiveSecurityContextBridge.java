@@ -1,4 +1,4 @@
-package cn.sparrowmini.common.service.client;
+package cn.sparrowmini.common.service.client.config;
 
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
